@@ -1,7 +1,7 @@
 import { invalidInput } from '../common/animations';
 import styled, { css } from 'styled-components';
 
-const Input = styled.input`
+const Input = styled.textarea`
   animation: ${props =>
     props.invalid
       ? css`
