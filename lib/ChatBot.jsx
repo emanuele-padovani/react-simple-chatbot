@@ -685,7 +685,6 @@ class ChatBot extends Component {
           <Footer className="rsc-footer" style={footerStyle}>
             {!currentStep.hideInput && (
               <Input
-                type="textarea"
                 style={inputStyle}
                 ref={this.setInputRef}
                 className="rsc-input"
