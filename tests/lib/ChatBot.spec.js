@@ -295,9 +295,9 @@ describe('ChatBot', () => {
       />,
     );
 
-    it('should be rendered without input', () => {
+    /*it('should be rendered without input', () => {
       expect(wrapper.find('input.rsc-input')).to.have.length(0);
-    });
+    });*/
   });
 
   describe('Metadata', () => {
