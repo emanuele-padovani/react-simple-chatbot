@@ -689,6 +689,7 @@ class ChatBot extends Component {
               <Textarea
                 style={inputStyle}
                 ref={this.setInputRef}
+                onKeyPress={() => Function.prototype}
                 className="rsc-input"
                 placeholder={inputInvalid ? '' : inputPlaceholder}
                 onChange={this.onValueChange}
