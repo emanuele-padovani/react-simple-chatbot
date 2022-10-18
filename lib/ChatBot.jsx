@@ -29,6 +29,7 @@ class ChatBot extends Component {
 
     this.content = null;
     this.input = null;
+    this.textarea = null;
 
     this.supportsScrollBehavior = false;
 
@@ -38,6 +39,10 @@ class ChatBot extends Component {
 
     this.setInputRef = element => {
       this.input = element;
+    };
+
+    this.setTextareaRef = element => {
+      this.textarea = element;
     };
 
     this.state = {
@@ -139,6 +144,9 @@ class ChatBot extends Component {
           if (enableMobileAutoFocus || !isMobile()) {
             if (this.input) {
               this.input.focus();
+            }
+            if (this.textarea) {
+              this.textarea.focus();
             }
           }
         });
@@ -319,6 +327,9 @@ class ChatBot extends Component {
               if (this.input) {
                 this.input.focus();
               }
+              if (this.textarea) {
+                this.textarea.focus();
+              }
             }
           });
         } else {
@@ -472,6 +483,9 @@ class ChatBot extends Component {
           if (this.input) {
             this.input.blur();
           }
+          if (this.textarea) {
+            this.textarea.blur();
+          }
         }
       );
     }
@@ -502,6 +516,9 @@ class ChatBot extends Component {
                 if (enableMobileAutoFocus || !isMobile()) {
                   if (this.input) {
                     this.input.focus();
+                  }
+                  if (this.textarea) {
+                    this.textarea.focus();
                   }
                 }
               }
@@ -688,7 +705,7 @@ class ChatBot extends Component {
             {!currentStep.hideInput && isTextarea ? (
               <Textarea
                 style={inputStyle}
-                ref={this.setInputRef}
+                ref={this.setTextareaRef}
                 onKeyPress={() => Function.prototype}
                 className="rsc-input"
                 placeholder={inputInvalid ? '' : inputPlaceholder}
