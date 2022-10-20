@@ -14,8 +14,7 @@ import {
   FloatingIcon,
   Footer,
   Input,
-  SubmitButton,
-  Textarea
+  SubmitButton
 } from './components';
 import Recognition from './recognition';
 import { ChatIcon, CloseIcon, SubmitIcon, MicIcon } from './icons';
@@ -435,6 +434,8 @@ class ChatBot extends Component {
   };
 
   handleKeyPress = event => {
+    // eslint-disable-next-line react/destructuring-assignment,no-console
+    console.log('is -> ', this.props.isTextarea);
     if (event.key === 'Enter') {
       this.submitUserMessage();
     }
@@ -702,24 +703,10 @@ class ChatBot extends Component {
             {renderedSteps.map(this.renderStep)}
           </Content>
           <Footer className="rsc-footer" style={footerStyle}>
-            {!currentStep.hideInput && isTextarea ? (
-              <Textarea
-                style={inputStyle}
-                ref={this.setTextareaRef}
-                onKeyPress={() => Function.prototype}
-                className="rsc-input"
-                placeholder={inputInvalid ? '' : inputPlaceholder}
-                onChange={this.onValueChange}
-                value={inputValue}
-                floating={floating}
-                invalid={inputInvalid}
-                disabled={disabled}
-                hasButton={!hideSubmitButton}
-                {...inputAttributesOverride}
-              />
-            ) : (
+            {!currentStep.hideInput && (
               <Input
-                type="text"
+                type={isTextarea ? 'textarea' : 'text'}
+                isTextarea={isTextarea}
                 style={inputStyle}
                 ref={this.setInputRef}
                 className="rsc-input"
