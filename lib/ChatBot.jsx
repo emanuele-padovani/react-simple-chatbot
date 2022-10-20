@@ -434,9 +434,9 @@ class ChatBot extends Component {
   };
 
   handleKeyPress = event => {
-    // eslint-disable-next-line react/destructuring-assignment,no-console
-    console.log('is -> ', this.props.isTextarea);
-    if (event.key === 'Enter') {
+    const { isTextarea } = this.props;
+    // eslint-disable-next-line react/destructuring-assignment,
+    if (event.key === 'Enter' && !isTextarea) {
       this.submitUserMessage();
     }
   };
