@@ -434,6 +434,7 @@ class ChatBot extends Component {
   };
 
   handleKeyPress = event => {
+    event.preventDefault();
     if (event.key === 'Enter') {
       this.submitUserMessage();
     }
@@ -709,6 +710,7 @@ class ChatBot extends Component {
                 ref={this.setInputRef}
                 className="rsc-input"
                 placeholder={inputInvalid ? '' : inputPlaceholder}
+                onKeyDown={isTextarea ? null : this.handleKeyPress}
                 onChange={this.onValueChange}
                 value={inputValue}
                 floating={floating}
