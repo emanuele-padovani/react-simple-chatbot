@@ -434,9 +434,7 @@ class ChatBot extends Component {
   };
 
   handleKeyPress = event => {
-    const { isTextarea } = this.props;
-    // eslint-disable-next-line react/destructuring-assignment,
-    if (event.key === 'Enter' && !isTextarea) {
+    if (event.key === 'Enter') {
       this.submitUserMessage();
     }
   };
@@ -711,7 +709,7 @@ class ChatBot extends Component {
                 ref={this.setInputRef}
                 className="rsc-input"
                 placeholder={inputInvalid ? '' : inputPlaceholder}
-                onKeyPress={this.handleKeyPress}
+                onKeyPress={isTextarea ? Function.prototype() : this.handleKeyPress}
                 onChange={this.onValueChange}
                 value={inputValue}
                 floating={floating}
