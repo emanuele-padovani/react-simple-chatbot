@@ -667,7 +667,7 @@ class ChatBot extends Component {
       : currentStep.placeholder || placeholder;
 
     const inputAttributesOverride = currentStep.inputAttributes || inputAttributes;
-    const isTextarea = inputAttributesOverride.type === 'textarea';
+    const isTextarea = inputAttributes.type === 'textarea';
 
     return (
       <div className={`rsc ${className}`}>
