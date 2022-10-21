@@ -69,5 +69,6 @@ const TextareaField = styled.textarea`
 // eslint-disable-next-line react/prop-types
 const Input = props =>
   // eslint-disable-next-line react/destructuring-assignment
-  props.isTextarea ? <TextareaField {...props} /> : <InputField {...props} />;
+  props.type === 'textarea' ? <TextareaField {...props} /> : <InputField {...props} />;
+
 export default Input;
