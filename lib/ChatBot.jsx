@@ -667,6 +667,7 @@ class ChatBot extends Component {
       : currentStep.placeholder || placeholder;
 
     const inputAttributesOverride = currentStep.inputAttributes || inputAttributes;
+    const isTextarea = inputAttributesOverride.type === 'textarea';
 
     return (
       <div className={`rsc ${className}`}>
@@ -708,7 +709,8 @@ class ChatBot extends Component {
                 ref={this.setInputRef}
                 className="rsc-input"
                 placeholder={inputInvalid ? '' : inputPlaceholder}
-                onKeyDown={inputAttributesOverride.type === 'textarea' ? null : this.handleKeyPress}
+                onKeyDown={isTextarea ? null : this.handleKeyPress}
+                isTextarea={isTextarea}
                 onChange={this.onValueChange}
                 value={inputValue}
                 floating={floating}
