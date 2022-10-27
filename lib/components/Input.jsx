@@ -36,11 +36,11 @@ const InputField = styled.input`
 
 const TextareaField = styled.textarea`
   animation: ${props =>
-    props.invalid
-      ? css`
+  props.invalid
+    ? css`
           ${invalidInput} .2s ease
         `
-      : ''};
+    : ''};
   border: 0;
   border-radius: 0;
   border-bottom-left-radius: 10px;
@@ -67,8 +67,7 @@ const TextareaField = styled.textarea`
 `;
 
 // eslint-disable-next-line react/prop-types
-const Input = ({ isTextarea, ...props }) =>
+const Input = props =>
   // eslint-disable-next-line react/destructuring-assignment
-  isTextarea ? <TextareaField {...props} /> : <InputField {...props} />;
-
+  props.isTextarea ? <TextareaField {...props} /> : <InputField {...props} />;
 export default Input;
