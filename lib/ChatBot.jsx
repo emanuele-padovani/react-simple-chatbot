@@ -688,12 +688,12 @@ class ChatBot extends Component {
             {!currentStep.hideInput && (
               <Input
                 type={isTextarea ? 'textarea' : 'text'}
-                isTextarea={isTextarea}
+                isTextarea={currentStep.isTextarea}
                 style={inputStyle}
                 ref={this.setInputRef}
                 className="rsc-input"
                 placeholder={inputInvalid ? '' : inputPlaceholder}
-                onKeyDown={isTextarea ? null : this.handleKeyPress}
+                onKeyDown={currentStep.isTextarea ? null : this.handleKeyPress}
                 onChange={this.onValueChange}
                 value={inputValue}
                 floating={floating}
