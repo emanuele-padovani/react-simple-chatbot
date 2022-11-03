@@ -686,7 +686,7 @@ class ChatBot extends Component {
             {!currentStep.hideInput && (
               <Input
                 type="text"
-                isTextarea={currentStep.isTextarea}
+                isTextarea={currentStep.isTextarea || inputInvalid}
                 style={inputStyle}
                 ref={this.setInputRef}
                 className="rsc-input"
