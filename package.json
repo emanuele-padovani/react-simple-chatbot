@@ -76,7 +76,7 @@
     "nyc": "^11.0.2",
     "react-test-renderer": "^16.0.0",
     "sinon": "^7.1.0",
-    "styled-components": "5.0.0",
+    "styled-components": "^5.3.6",
     "webpack": "^4.29.6",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.1.2",
@@ -85,17 +85,17 @@
   "dependencies": {
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
+    "flatted": "^2.0.0",
     "onchange": "^5.2.0",
     "prettier": "^1.16.4",
-    "flatted": "^2.0.0",
     "prop-types": "^15.6.0",
     "random-id": "0.0.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1"
-  },
-  "peerDependencies": {
-    "styled-components": "5.0.0",
     "react": "^16.3.0",
     "react-dom": "^16.3.0"
+  },
+  "peerDependencies": {
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "styled-components": "^5.3.6"
   }
 }
