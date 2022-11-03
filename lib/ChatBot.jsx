@@ -618,7 +618,7 @@ class ChatBot extends Component {
       style,
       submitButtonStyle,
       width,
-      height,
+      height
     } = this.props;
 
     const header = headerComponent || (
@@ -685,7 +685,7 @@ class ChatBot extends Component {
           <Footer className="rsc-footer" style={footerStyle}>
             {!currentStep.hideInput && (
               <Input
-                type={'text'}
+                type="text"
                 isTextarea={currentStep.isTextarea}
                 style={inputStyle}
                 ref={this.setInputRef}
@@ -773,7 +773,7 @@ ChatBot.propTypes = {
   submitButtonStyle: PropTypes.objectOf(PropTypes.any),
   userAvatar: PropTypes.string,
   userDelay: PropTypes.number,
-  width: PropTypes.string,
+  width: PropTypes.string
 };
 
 ChatBot.defaultProps = {
